@@ -1,15 +1,13 @@
 import play.Project._
 
-name := "Scarlet"
+name := "ScarletApp"
 
 version := "1.0-SNAPSHOT"
 
 organization := "com.claydonkey"
 
-libraryDependencies ++= Seq(
-   "com.claydonkey" %% "ean" % "1.0.1"
-)     
+resolvers += Resolver.url("Claydonkey Play Repository", url("http://claydonkey.github.io/releases/"))(Resolver.ivyStylePatterns)
 
-resolvers += Resolver.url("Claydonkey Play Repository", "http://claydonkey.github.io/releases/")(Resolver.ivyStylePatterns)
+libraryDependencies ++= Seq("com.claydonkey" %% "ean" % "1.0.1")  
 
 playScalaSettings
