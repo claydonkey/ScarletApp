@@ -8,11 +8,11 @@ object ApplicationBuild extends Build {
   val appVersion = "1.0-SNAPSHOT"
 
   val appDependencies = Seq(
-
+    "com.claydonkey" %% "ean" % "1.0-SNAPSHOT"
   )
 
   val main = play.Project(appName, appVersion, appDependencies).settings(
-    // Add your own project settings here
+    resolvers += Resolver.url("Claydonkey Play Repository", url("http://claydonkey.github.io/releases/"))(Resolver.ivyStylePatterns)
   )
 
 }
