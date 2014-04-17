@@ -12,7 +12,7 @@ object ApplicationBuild extends Build {
   )
 
   val main = play.Project(appName, appVersion, appDependencies).settings(
-    resolvers += Resolver.url("Claydonkey Play Repository", url("http://claydonkey.github.io/releases/"))(Resolver.ivyStylePatterns)
+    resolvers += Resolver.url("Claydonkey Play Repository", url("http://claydonkey.github.io/snapshots/"))(Resolver.ivyStylePatterns)
   )
 
 }
